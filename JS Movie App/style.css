@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #444;
+}
+
+header{
+    text-align: center;
+}
+
+.tittle{
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3rem;
+    letter-spacing: 8px;
+}
+
+.search{
+    margin-bottom: 20px;
+    padding: 5px;
+    color: black;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 320px;
+    height: 35px;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.movies{
+    width: 100%;
+    background: #777;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+}
+
+.movies img{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.movie-info{
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-top: 20px;
+}
+
+.movie-info h3{
+    flex: 1;
+}
+
+span{
+    background: #999;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: green;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateY(100%);
+    padding: 2rem;
+    transition: 0.5s ease-in-out;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.movies:hover .overview{
+    transform: translateY(0);
+}
+
+.over-title{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.popularity{
+    padding: 7px 12px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    background: #fff;
+    transition: 250ms ease-in-out;
+    border-radius: 5px;
+}
+
+.vote-count{
+    padding: 7px 12px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background: #fff;
+    transition: 250ms ease-in-out;
+    border-radius: 5px;
+}
+
+.popularity:hover,
+.vote-count:hover{
+    background: #999;
+    color: white;
+}
